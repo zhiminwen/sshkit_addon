@@ -1,5 +1,16 @@
 # An addon for sshkit
 
+## Install and require 
+Install 
+```
+gem install sshkit-addon
+```
+Use
+```
+require 'sshkit-addon'
+```
+
+## Define hosts
 define the sshkit host with hash structure. then define tasks by choosing the host
 ```
 cap3 = CapBase.new({
@@ -26,4 +37,24 @@ task :run_command_on, [:host_key, :cmd] do |t, args|
 end
 
 ```
+## Backend helper
+upload a string to remote file
+```
+  put %Q(configuration strings), file="/tmp/config.txt"
+  execute %Q(cat #{file})
+```
 
+## A shell command constructor
+Join the lines by default with " && ", excluding the comment
+```
+    cmds = ShellCommandConstructor.construct_command %Q{
+       # comment line
+       hostname
+       id
+    }
+    execute cmds
+```
+
+
+## format
+Basically a clone of the sshkit pretty format. Just update the command output with hostname prefixed
