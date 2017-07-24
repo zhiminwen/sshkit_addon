@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Addon of the sshkit"
   s.authors     = ["Zhimin Wen"]
   s.email       = 'zhimin.wen@gmail.com'
-  s.files       = Dir["lib/**/*.rb"]
+  s.files       = Dir["lib/**/*.rb"] + ["readme.md"]
 
   s.homepage    = 'http://github.com/zhiminwen/sshkit_addon'
   s.license     = 'MIT'

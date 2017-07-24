@@ -1,0 +1,15 @@
+desc "build gem"
+task :build_gem do
+  sh %Q(gem build sshkit_addon.gemspec)
+end
+
+desc "set remote oringin"
+task :set_remote do
+  #git remote set-url origin git@github.com:zhiminwen/sshkit_addon.git 
+  sh %Q(git remote add origin git@github.com:zhiminwen/sshkit_addon.git)
+end
+
+desc "push"
+task :push do
+  sh %Q(git push -u origin master)
+end
