@@ -3,11 +3,11 @@
 ## Install and require 
 Install 
 ```
-gem install sshkit-addon
+gem install sshkit_addon
 ```
 Use
 ```
-require 'sshkit-addon'
+require 'sshkit_addon'
 ```
 
 ## Define hosts
